@@ -16,7 +16,7 @@ book:
   chapters:
     - index.qmd
     - 使用R语言画ISME中的进化树.qmd
-    - summary.qmd
+    - 总结.qmd
     - references.qmd
 
 bibliography: references.bib

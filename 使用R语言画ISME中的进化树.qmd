@@ -1,5 +1,308 @@
-# 使用R语言画ISME中的进化树
+# 使用R语言画*ISME*中的进化树
 
-使用R画ISME[论文]()中Figure 1. 中的进化树图
+使用R画**ISME** [论文](https://doi.org/10.1093/ismejo/wrad031)
+中Figure 1. 中的进化树图。
 
+论文PDF[文件](ISME1.pdf)
+
+## 加载R包
+
+```{r}
+#| lable: loadRPackage
+#| warning: false
+#| message: false
+
+rm(list = ls())
+
+library(tidyverse)
+library(ggtree)
+library(treeio)
+library(tidytree)
+library(ggfun)
+library(aplot)
+library(ggnewscale)
+library(patchwork)
+library(ggstar)
+```
+
+
+## 加载数据
+
+```{r}
+#| message: false
+#| warning: false
+####----load Data----####
+tree <- treeio::read.newick(file = "./data/WRKY_TAIR.pep.muscle_1.treefile",
+                            node.label = "support")
+
+tree2 <- root(tree %>% as.phylo(), node=78)
+
+get_taxa_name(root(tree %>% as.phylo(),
+                   node=78) %>%
+                ggtree(., branch.length="none") ) -> tree.sort.id
+
+star_data <- read_delim(file = "./data/star_data_1.csv", col_names = T, delim = ",")
+
+group_info <- read_delim(file = "./data/group_info_1.csv", delim = ",", col_names = T)
+
+
+annotation_df <- read_delim(file = "./data/annotation_df_1.csv",
+                            delim = ",",
+                            col_names = T)
+
+bar_df <- read_delim(file = "./data/bar_df_1.csv", delim = ",", col_names = T)
+```
+
+
+## 画进化树
+
+```{r}
+#| message: false
+#| warning: false
+####----Tree Plot----####
+
+tree_df <- as_tibble(tree) %>%
+  dplyr::left_join(star_data, by = c("label" = "ID"))
+
+as_tibble(tree)
+
+p1 <- ggtree(tree2) %<+% tree_df  +
+  geom_nodepoint() + 
+  geom_tiplab(align = T, offset = 0.3) +
+  # geom_nodelab(aes(label = node)) +
+  geom_tippoint(aes(color = star), x = 10, size = 5) +
+  # geom_star(aes(starshape = star, fill = star), starshape = 1, x = 10)+
+  scale_color_manual(values = "#ef3b2c",na.translate=FALSE, name = "Signif") + 
+  theme_tree() + 
+  theme(legend.background = element_roundrect(color = "#969696")) + 
+  xlim(NA, 10)
+
+p1
+
+# p2 <- scaleClade(p1, 78, 1) %>%
+#   collapse(78, 'max', fill="darkgreen") +
+p2 <- p1+
+  # annotate(geom = "text", x = 6, y= 4.5, label = "OutGroup") + 
+  geom_hilight(node = 80,
+               type = "gradient", 
+               gradient.direction = 'tr',
+               alpha = .8,
+               fill = "#addd8e",
+               to.bottom = T,
+               extend = 5.5
+  ) + 
+  geom_hilight(node = 104,
+               type = "gradient", 
+               gradient.direction = 'tr',
+               alpha = .8,
+               fill = "#41ab5d",
+               to.bottom = T,
+               extend = 6
+  ) + 
+  geom_hilight(node = 120,
+               type = "gradient", 
+               gradient.direction = 'tr',
+               alpha = .8,
+               fill = "#9ebcda",
+               to.bottom = T,
+               extend = 5.6
+  ) + 
+  geom_hilight(node = 78,
+               type = "gradient", 
+               gradient.direction = 'tr',
+               alpha = .8,
+               fill = "#8c6bb1",
+               to.bottom = T,
+               extend = 3
+  ) + 
+  geom_nodepoint(aes(fill=cut(support, c(0, 50, 75, 100))),
+                 shape=21, size=2) +
+  scale_fill_manual(values=c("black", "grey", "white"),
+                    guide='legend', name='Bootstrap Percentage(BP)',
+                    breaks=c('(75,100]', '(50,75]', '(0,50]'),
+                    labels=expression(BP>75, 50 < BP * "<=75", BP <= 50)) + 
+  geom_treescale(x = 0, y = 70, fontsize = 5, linesize = 2) + 
+  geom_tree() + 
+  theme(legend.background = element_roundrect(color = "#969696"))
+
+p2
+
+```
+
+
+```{r}
+#| eval: false
+
+
+
+
+####----add bar plot for Group information----####
+id <- tree.sort.id
+
+
+group_info %>%
+  dplyr::group_by(Group) %>%
+  dplyr::summarise(count = n()) %>%
+  dplyr::arrange(desc(Group)) %>%
+  dplyr::mutate(cumsum = cumsum(count)) %>%
+  dplyr::mutate(position = cumsum - 0.5 * count) %>%
+  dplyr::mutate(Type = "Group")-> position1
+
+
+group_info %>%
+  dplyr::group_by(SupGroup) %>%
+  dplyr::summarise(count = n()) %>%
+  dplyr::arrange(desc(SupGroup)) %>%
+  dplyr::mutate(cumsum = cumsum(count)) %>%
+  dplyr::mutate(position = cumsum - 0.5 * count) %>%
+  dplyr::mutate(Type = "SupGroup")-> position2
+
+
+
+
+group_info %>%
+  dplyr::mutate(ID = factor(ID, levels = rev(tree.sort.id), ordered = T)) %>%
+  tidyr::pivot_longer(cols = -ID, names_to = "Type", values_to = "Value") %>%
+  ggplot(aes(x = Type, y = ID)) + 
+  geom_tile(aes(fill = Value), linewidth = 0, color = NA) + 
+  geom_text(data = position1, aes(x = Type, y = position, label = Group),
+            size = 5,
+            color = "#000000") + 
+  geom_text(data = position2, aes(x = Type, y = position, label = SupGroup),
+            angle = 90,
+            fontface = 3,
+            size = 6,
+            color = "#ffffff") + 
+  scale_fill_manual(
+    values = c(
+      "group_1" = "#addd8e",
+      "group_2" = "#41ab5d",
+      "group_3" = "#9ebcda",
+      "group_4" = "#8c6bb1",
+      "SubGroup_1" = "#238443",
+      "SubGroup_2" = "#88419d"),
+    name = "Group Info") + 
+  scale_x_discrete(position = "top") + 
+  labs(x = "", y = "") + 
+  theme_bw() + 
+  theme(
+    panel.background = element_blank(),
+    panel.border = element_blank(),
+    panel.grid = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.text.x.top = element_text(size = 15, color = "#000000", angle = 45, hjust = 0, face="bold"),
+    axis.ticks.x.top = element_blank(),
+    plot.background = element_blank(),
+    legend.background = element_roundrect(color = "#969696")
+  )-> p_class
+
+p_class
+
+p_class %>% insert_left(p2, width = 1.2)
+
+
+####---- add Other annotation information----####
+
+
+annotation_df %>%
+  dplyr::mutate(GC_content = cut(GC_content, breaks = c(30,40,50,60,70,80), right = F)) %>%
+  dplyr::mutate(Completeness = cut(Completeness, breaks = c(40,50,60,70,80,90), right = F)) %>%
+  dplyr::mutate(Contamination = cut(Contamination, breaks = c(50,60,70,80,90,100), right = F)) %>%
+  tidyr::pivot_longer(cols = -ID, names_to = "Type", values_to = "Value") %>%
+  dplyr::mutate(Type = factor(Type, levels = c("GC_content", "Completeness", "Contamination",
+                                               "Source", "Habitate_Type", "RNA"),
+                              ordered = T)) %>%
+  dplyr::mutate(ID = factor(ID, levels = rev(tree.sort.id), ordered = T)) %>%
+  ggplot(aes(x = Type, y = ID)) + 
+  geom_tile(fill = "#ffffff", width = 0.8) + 
+  geom_tile(data = . %>% dplyr::filter(Type == "GC_content"),aes(fill = Value), width = 0.5, alpha = 0.6, color = "white") + 
+  scale_fill_manual(values = c('#f0f9e8','#bae4bc','#7bccc4','#43a2ca','#0868ac'), 
+                    name = "GC_content",
+                    guide = guide_legend(order = 1)) + 
+  new_scale_fill() + 
+  geom_tile(data = . %>% dplyr::filter(Type == "Completeness"),aes(fill = Value), width = 0.5, alpha = 0.6, color = "white") +
+  scale_fill_manual(values = c('#f1eef6','#d7b5d8','#df65b0','#dd1c77','#980043'), 
+                    name = "Completeness",
+                    guide = guide_legend(order = 2)) + 
+  new_scale_fill() + 
+  geom_tile(data = . %>% dplyr::filter(Type == "Contamination"),aes(fill = Value), width = 0.5, alpha = 0.6, color = "white") + 
+  scale_fill_manual(values = c('#f2f0f7','#cbc9e2','#9e9ac8','#756bb1','#54278f'), 
+                    name = "Contamination",
+                    guide = guide_legend(order = 3)) + 
+  new_scale_fill() + 
+  geom_point(data = . %>% dplyr::filter(Type == "Source"), aes(fill = Value), size = 7, alpha = 0.75, shape = 21, color = "white") + 
+  scale_fill_manual(values = c('#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3',
+                               '#fdb462','#b3de69','#fccde5','#d9d9d9','#bc80bd'), 
+                    name = "Source",
+                    guide = guide_legend(order = 4)) + 
+  new_scale_fill() + 
+  geom_point(data = . %>% dplyr::filter(Type == "Habitate_Type"), aes(fill = Value), size = 7, alpha = 0.75, shape = 21, color = "white") + 
+  scale_fill_manual(values = c('#a6cee3','#1f78b4','#b2df8a'), 
+                    name = "Habitate_Type",
+                    guide = guide_legend(order = 5)) + 
+  new_scale_fill() + 
+  geom_point(data = . %>% dplyr::filter(Type == "RNA"), aes(fill = Value), size = 7, alpha = 0.75, shape = 21, color = "white") + 
+  scale_fill_manual(values = c('#66c2a5','#fc8d62'), 
+                    name = "RNA",
+                    guide = guide_legend(order = 6)) + 
+  labs(x = "", y = "") + 
+  scale_x_discrete(position = "top") + 
+  theme_bw() + 
+  theme(
+    panel.background = element_blank(),
+    panel.border = element_blank(),
+    panel.grid = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.text.x.top = element_text(size = 15, color = "#000000", angle = 45, hjust = 0, face="bold"),
+    axis.ticks.x.top = element_blank(),
+    plot.background = element_blank(),
+    legend.background = element_roundrect(color = "#969696")
+  ) -> p.annotation
+
+p.annotation %>% insert_left(p_class) %>% insert_left(p2, width = 1.2)
+
+####---- add bar plot----####
+
+p_bar <- bar_df %>%
+  dplyr::mutate(ID = factor(ID, levels = rev(tree.sort.id), ordered = T)) %>%
+  ggplot() + 
+  geom_bar(aes(x = Count, y = ID), fill = "#bdbdbd", stat = "identity") + 
+  scale_x_continuous(expand = c(0,0), position = "top") + 
+  geom_vline(xintercept = 4, linetype = 2) + 
+  labs(x = "", y = "") + 
+  theme_bw() +
+  theme(
+    panel.background = element_blank(),
+    panel.border = element_rect(linewidth = 1.5),
+    panel.grid = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.text.x = element_text(size = 15, color = "#000000", angle = 45, hjust = 0),
+    legend.background = element_roundrect(color = "#969696")
+  )
+
+p_bar
+
+
+####----combine----####
+p_combine <- p_bar %>% 
+  insert_left(p.annotation, width = 3) %>% 
+  insert_left(p_class, width = 1) %>% 
+  insert_left(p2, width = 3.5)
+
+# p_combine
+
+
+ggsave(filename = "p_combine1.pdf",
+       plot = p_combine,
+       height = 20,
+       width = 18)
+
+####----sessionInfo----####
+sessionInfo()
+
+
+```
 
