@@ -1,9 +1,10 @@
-# Preface {.unnumbered}
+# 前言 {.unnumbered}
 
-This is a Quarto book.
+这一个用来记录本人在学习和使用R语言中的一些笔记。
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+包括一些函数的用法，生物信息常用的作图等。
 
-```{r}
-1 + 1
-```
+鉴于本人水平有限， 错漏之处难免， 欢迎指出错误或提出改进意见。
+
+邮箱：mixfruitszu@gmail.com
+github: https://github.com/linzhengmix
