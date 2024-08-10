@@ -6,6 +6,13 @@ book:
   title: "r_notes"
   author: "Lin Zheng"
   date: "2024/8/10"
+  
+  reader-mode: true
+  cover-image: cover.jpg
+  favicon: cover.jpg
+  site-url: https://linzhengmix.github.io/r_notes/
+  repo-branch: main
+  
   chapters:
     - index.qmd
     - intro.qmd
