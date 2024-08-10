@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "R notes",
     "section": "",
-    "text": "前言\n这一个用来记录本人在学习和使用R语言中的一些笔记。\n包括一些函数的用法，生物信息常用的作图等。\n鉴于本人水平有限， 错漏之处难免， 欢迎指出错误或提出改进意见。\n邮箱：mixfruitszu@gmail.com github: https://github.com/linzhengmix",
+    "text": "前言\n这一个用来记录本人在学习和使用R语言中的一些笔记。\n包括一些函数的用法，生物信息常用的作图等。\n鉴于本人水平有限， 错漏之处难免， 欢迎指出错误或提出改进意见。\n邮箱: mixfruitszu@gmail.com\ngithub\nRnotes",
     "crumbs": [
       "前言"
     ]
@@ -37,6 +37,16 @@
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
     "crumbs": [
       "References"
+    ]
+  },
+  {
+    "objectID": "使用R语言画ISME中的进化树.html",
+    "href": "使用R语言画ISME中的进化树.html",
+    "title": "1  使用R语言画ISME中的进化树",
+    "section": "",
+    "text": "使用R画ISME论文中Figure 1. 中的进化树图",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>使用R语言画ISME中的进化树</span>"
     ]
   }
 ]
