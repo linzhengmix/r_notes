@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./使用R语言画ISME中的进化树.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">使用R语言画<em>ISME</em>中的进化树</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./使用R语言画ISME中的进化树.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">使用R语言画<strong><em>ISME</em></strong>中的进化树</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -132,13 +132,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">R notes</a> 
-        <div class="sidebar-tools-main">
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
-  <div class="quarto-reader-toggle-btn">
-  <i class="bi"></i>
-  </div>
-</a>
-</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -157,7 +150,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./使用R语言画ISME中的进化树.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">使用R语言画<em>ISME</em>中的进化树</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">使用R语言画<strong><em>ISME</em></strong>中的进化树</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -185,6 +178,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#加载r包" id="toc-加载r包" class="nav-link active" data-scroll-target="#加载r包"><span class="header-section-number">1.1</span> 加载R包</a></li>
   <li><a href="#加载数据" id="toc-加载数据" class="nav-link" data-scroll-target="#加载数据"><span class="header-section-number">1.2</span> 加载数据</a></li>
   <li><a href="#画进化树" id="toc-画进化树" class="nav-link" data-scroll-target="#画进化树"><span class="header-section-number">1.3</span> 画进化树</a></li>
+  <li><a href="#给进化树加上条形图和分组信息" id="toc-给进化树加上条形图和分组信息" class="nav-link" data-scroll-target="#给进化树加上条形图和分组信息"><span class="header-section-number">1.4</span> 给进化树加上条形图和分组信息</a></li>
+  <li><a href="#添加其他注释信息" id="toc-添加其他注释信息" class="nav-link" data-scroll-target="#添加其他注释信息"><span class="header-section-number">1.5</span> 添加其他注释信息</a></li>
+  <li><a href="#添加右边的条形图" id="toc-添加右边的条形图" class="nav-link" data-scroll-target="#添加右边的条形图"><span class="header-section-number">1.6</span> 添加右边的条形图</a></li>
+  <li><a href="#将所有组件结合在一起" id="toc-将所有组件结合在一起" class="nav-link" data-scroll-target="#将所有组件结合在一起"><span class="header-section-number">1.7</span> 将所有组件结合在一起</a></li>
+  <li><a href="#系统信息" id="toc-系统信息" class="nav-link" data-scroll-target="#系统信息"><span class="header-section-number">1.8</span> 系统信息</a></li>
   </ul>
 </nav>
     </div>
@@ -193,7 +191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">使用R语言画<em>ISME</em>中的进化树</span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">使用R语言画<strong><em>ISME</em></strong>中的进化树</span></h1>
 </div>
 
 
@@ -210,7 +208,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>使用R画<strong>ISME</strong> <a href="https://doi.org/10.1093/ismejo/wrad031" target="_blank">论文</a> 中Figure 1. 中的进化树图。</p>
+<p>使用R画<strong><em>ISME</em></strong> <a href="https://doi.org/10.1093/ismejo/wrad031" target="_blank">论文</a> 中Figure 1. 中的进化树图。</p>
 <p>论文PDF<a href="ISME1.pdf" target="_blank">文件</a></p>
 <section id="加载r包" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="加载r包"><span class="header-section-number">1.1</span> 加载R包</h2>
@@ -230,7 +228,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="加载数据" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="加载数据"><span class="header-section-number">1.2</span> 加载数据</h2>
-<div class="cell">
+<div class="cell" data-lable="loadData">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">####----load Data----####</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tree <span class="ot">&lt;-</span> treeio<span class="sc">::</span><span class="fu">read.newick</span>(<span class="at">file =</span> <span class="st">"./data/WRKY_TAIR.pep.muscle_1.treefile"</span>,</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                            <span class="at">node.label =</span> <span class="st">"support"</span>)</span>
@@ -255,7 +253,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="画进化树" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="画进化树"><span class="header-section-number">1.3</span> 画进化树</h2>
-<div class="cell">
+<div class="cell" data-lable="p1">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">####----Tree Plot----####</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>tree_df <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(tree) <span class="sc">%&gt;%</span></span>
@@ -295,232 +293,313 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="使用R语言画ISME中的进化树_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="使用R语言画ISME中的进化树_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># p2 &lt;- scaleClade(p1, 78, 1) %&gt;%</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">#   collapse(78, 'max', fill="darkgreen") +</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> p1<span class="sc">+</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># annotate(geom = "text", x = 6, y= 4.5, label = "OutGroup") + </span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hilight</span>(<span class="at">node =</span> <span class="dv">80</span>,</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>               <span class="at">type =</span> <span class="st">"gradient"</span>, </span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>               <span class="at">gradient.direction =</span> <span class="st">'tr'</span>,</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>               <span class="at">alpha =</span> .<span class="dv">8</span>,</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="st">"#addd8e"</span>,</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>               <span class="at">to.bottom =</span> T,</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>               <span class="at">extend =</span> <span class="fl">5.5</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hilight</span>(<span class="at">node =</span> <span class="dv">104</span>,</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>               <span class="at">type =</span> <span class="st">"gradient"</span>, </span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>               <span class="at">gradient.direction =</span> <span class="st">'tr'</span>,</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>               <span class="at">alpha =</span> .<span class="dv">8</span>,</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="st">"#41ab5d"</span>,</span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>               <span class="at">to.bottom =</span> T,</span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>               <span class="at">extend =</span> <span class="dv">6</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hilight</span>(<span class="at">node =</span> <span class="dv">120</span>,</span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>               <span class="at">type =</span> <span class="st">"gradient"</span>, </span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>               <span class="at">gradient.direction =</span> <span class="st">'tr'</span>,</span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>               <span class="at">alpha =</span> .<span class="dv">8</span>,</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="st">"#9ebcda"</span>,</span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>               <span class="at">to.bottom =</span> T,</span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>               <span class="at">extend =</span> <span class="fl">5.6</span></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hilight</span>(<span class="at">node =</span> <span class="dv">78</span>,</span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>               <span class="at">type =</span> <span class="st">"gradient"</span>, </span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>               <span class="at">gradient.direction =</span> <span class="st">'tr'</span>,</span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>               <span class="at">alpha =</span> .<span class="dv">8</span>,</span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="st">"#8c6bb1"</span>,</span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>               <span class="at">to.bottom =</span> T,</span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>               <span class="at">extend =</span> <span class="dv">3</span></span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_nodepoint</span>(<span class="fu">aes</span>(<span class="at">fill=</span><span class="fu">cut</span>(support, <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">50</span>, <span class="dv">75</span>, <span class="dv">100</span>))),</span>
-<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>                 <span class="at">shape=</span><span class="dv">21</span>, <span class="at">size=</span><span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">"black"</span>, <span class="st">"grey"</span>, <span class="st">"white"</span>),</span>
-<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>                    <span class="at">guide=</span><span class="st">'legend'</span>, <span class="at">name=</span><span class="st">'Bootstrap Percentage(BP)'</span>,</span>
-<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>                    <span class="at">breaks=</span><span class="fu">c</span>(<span class="st">'(75,100]'</span>, <span class="st">'(50,75]'</span>, <span class="st">'(0,50]'</span>),</span>
-<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labels=</span><span class="fu">expression</span>(BP<span class="sc">&gt;</span><span class="dv">75</span>, <span class="dv">50</span> <span class="sc">&lt;</span> BP <span class="sc">*</span> <span class="st">"&lt;=75"</span>, BP <span class="sc">&lt;=</span> <span class="dv">50</span>)) <span class="sc">+</span> </span>
-<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_treescale</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="dv">70</span>, <span class="at">fontsize =</span> <span class="dv">5</span>, <span class="at">linesize =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
-<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tree</span>() <span class="sc">+</span> </span>
-<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.background =</span> <span class="fu">element_roundrect</span>(<span class="at">color =</span> <span class="st">"#969696"</span>))</span>
-<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-lable="p2">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> p1<span class="sc">+</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># annotate(geom = "text", x = 6, y= 4.5, label = "OutGroup") + </span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hilight</span>(<span class="at">node =</span> <span class="dv">80</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">type =</span> <span class="st">"gradient"</span>, </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">gradient.direction =</span> <span class="st">'tr'</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>               <span class="at">alpha =</span> .<span class="dv">8</span>,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="st">"#addd8e"</span>,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>               <span class="at">to.bottom =</span> T,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>               <span class="at">extend =</span> <span class="fl">5.5</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hilight</span>(<span class="at">node =</span> <span class="dv">104</span>,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>               <span class="at">type =</span> <span class="st">"gradient"</span>, </span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>               <span class="at">gradient.direction =</span> <span class="st">'tr'</span>,</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>               <span class="at">alpha =</span> .<span class="dv">8</span>,</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="st">"#41ab5d"</span>,</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>               <span class="at">to.bottom =</span> T,</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>               <span class="at">extend =</span> <span class="dv">6</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hilight</span>(<span class="at">node =</span> <span class="dv">120</span>,</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>               <span class="at">type =</span> <span class="st">"gradient"</span>, </span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>               <span class="at">gradient.direction =</span> <span class="st">'tr'</span>,</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>               <span class="at">alpha =</span> .<span class="dv">8</span>,</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="st">"#9ebcda"</span>,</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>               <span class="at">to.bottom =</span> T,</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>               <span class="at">extend =</span> <span class="fl">5.6</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hilight</span>(<span class="at">node =</span> <span class="dv">78</span>,</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>               <span class="at">type =</span> <span class="st">"gradient"</span>, </span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>               <span class="at">gradient.direction =</span> <span class="st">'tr'</span>,</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>               <span class="at">alpha =</span> .<span class="dv">8</span>,</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="st">"#8c6bb1"</span>,</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>               <span class="at">to.bottom =</span> T,</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>               <span class="at">extend =</span> <span class="dv">3</span></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_nodepoint</span>(<span class="fu">aes</span>(<span class="at">fill=</span><span class="fu">cut</span>(support, <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">50</span>, <span class="dv">75</span>, <span class="dv">100</span>))),</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>                 <span class="at">shape=</span><span class="dv">21</span>, <span class="at">size=</span><span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">"black"</span>, <span class="st">"grey"</span>, <span class="st">"white"</span>),</span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>                    <span class="at">guide=</span><span class="st">'legend'</span>, <span class="at">name=</span><span class="st">'Bootstrap Percentage(BP)'</span>,</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>                    <span class="at">breaks=</span><span class="fu">c</span>(<span class="st">'(75,100]'</span>, <span class="st">'(50,75]'</span>, <span class="st">'(0,50]'</span>),</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labels=</span><span class="fu">expression</span>(BP<span class="sc">&gt;</span><span class="dv">75</span>, <span class="dv">50</span> <span class="sc">&lt;</span> BP <span class="sc">*</span> <span class="st">"&lt;=75"</span>, BP <span class="sc">&lt;=</span> <span class="dv">50</span>)) <span class="sc">+</span> </span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_treescale</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="dv">70</span>, <span class="at">fontsize =</span> <span class="dv">5</span>, <span class="at">linesize =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tree</span>() <span class="sc">+</span> </span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.background =</span> <span class="fu">element_roundrect</span>(<span class="at">color =</span> <span class="st">"#969696"</span>))</span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="使用R语言画ISME中的进化树_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="使用R语言画ISME中的进化树_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
-<div class="cell">
+</section>
+<section id="给进化树加上条形图和分组信息" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="给进化树加上条形图和分组信息"><span class="header-section-number">1.4</span> 给进化树加上条形图和分组信息</h2>
+<div class="cell" data-lable="p_class">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">####----add bar plot for Group information----####</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>id <span class="ot">&lt;-</span> tree.sort.id</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>group_info <span class="sc">%&gt;%</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(Group) <span class="sc">%&gt;%</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(<span class="fu">desc</span>(Group)) <span class="sc">%&gt;%</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">cumsum =</span> <span class="fu">cumsum</span>(count)) <span class="sc">%&gt;%</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">position =</span> cumsum <span class="sc">-</span> <span class="fl">0.5</span> <span class="sc">*</span> count) <span class="sc">%&gt;%</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">Type =</span> <span class="st">"Group"</span>)<span class="ot">-&gt;</span> position1</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>group_info <span class="sc">%&gt;%</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(Group) <span class="sc">%&gt;%</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(<span class="fu">desc</span>(Group)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">cumsum =</span> <span class="fu">cumsum</span>(count)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">position =</span> cumsum <span class="sc">-</span> <span class="fl">0.5</span> <span class="sc">*</span> count) <span class="sc">%&gt;%</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">Type =</span> <span class="st">"Group"</span>)<span class="ot">-&gt;</span> position1</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>group_info <span class="sc">%&gt;%</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(SupGroup) <span class="sc">%&gt;%</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(<span class="fu">desc</span>(SupGroup)) <span class="sc">%&gt;%</span></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">cumsum =</span> <span class="fu">cumsum</span>(count)) <span class="sc">%&gt;%</span></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">position =</span> cumsum <span class="sc">-</span> <span class="fl">0.5</span> <span class="sc">*</span> count) <span class="sc">%&gt;%</span></span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">Type =</span> <span class="st">"SupGroup"</span>)<span class="ot">-&gt;</span> position2</span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>group_info <span class="sc">%&gt;%</span></span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">ID =</span> <span class="fu">factor</span>(ID, <span class="at">levels =</span> <span class="fu">rev</span>(tree.sort.id), <span class="at">ordered =</span> T)) <span class="sc">%&gt;%</span></span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>ID, <span class="at">names_to =</span> <span class="st">"Type"</span>, <span class="at">values_to =</span> <span class="st">"Value"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Type, <span class="at">y =</span> ID)) <span class="sc">+</span> </span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="fu">aes</span>(<span class="at">fill =</span> Value), <span class="at">linewidth =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="cn">NA</span>) <span class="sc">+</span> </span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> position1, <span class="fu">aes</span>(<span class="at">x =</span> Type, <span class="at">y =</span> position, <span class="at">label =</span> Group),</span>
-<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>            <span class="at">size =</span> <span class="dv">5</span>,</span>
-<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>            <span class="at">color =</span> <span class="st">"#000000"</span>) <span class="sc">+</span> </span>
-<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> position2, <span class="fu">aes</span>(<span class="at">x =</span> Type, <span class="at">y =</span> position, <span class="at">label =</span> SupGroup),</span>
-<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>            <span class="at">angle =</span> <span class="dv">90</span>,</span>
-<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>            <span class="at">fontface =</span> <span class="dv">3</span>,</span>
-<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>            <span class="at">size =</span> <span class="dv">6</span>,</span>
-<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>            <span class="at">color =</span> <span class="st">"#ffffff"</span>) <span class="sc">+</span> </span>
-<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(</span>
-<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">values =</span> <span class="fu">c</span>(</span>
-<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>      <span class="st">"group_1"</span> <span class="ot">=</span> <span class="st">"#addd8e"</span>,</span>
-<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>      <span class="st">"group_2"</span> <span class="ot">=</span> <span class="st">"#41ab5d"</span>,</span>
-<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>      <span class="st">"group_3"</span> <span class="ot">=</span> <span class="st">"#9ebcda"</span>,</span>
-<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>      <span class="st">"group_4"</span> <span class="ot">=</span> <span class="st">"#8c6bb1"</span>,</span>
-<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>      <span class="st">"SubGroup_1"</span> <span class="ot">=</span> <span class="st">"#238443"</span>,</span>
-<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>      <span class="st">"SubGroup_2"</span> <span class="ot">=</span> <span class="st">"#88419d"</span>),</span>
-<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">"Group Info"</span>) <span class="sc">+</span> </span>
-<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">position =</span> <span class="st">"top"</span>) <span class="sc">+</span> </span>
-<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> <span class="st">""</span>) <span class="sc">+</span> </span>
-<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span> </span>
-<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.border =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks.y =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x.top =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>, <span class="at">color =</span> <span class="st">"#000000"</span>, <span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">face=</span><span class="st">"bold"</span>),</span>
-<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks.x.top =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.background =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.background =</span> <span class="fu">element_roundrect</span>(<span class="at">color =</span> <span class="st">"#969696"</span>)</span>
-<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a>  )<span class="ot">-&gt;</span> p_class</span>
-<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>p_class</span>
-<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a>p_class <span class="sc">%&gt;%</span> <span class="fu">insert_left</span>(p2, <span class="at">width =</span> <span class="fl">1.2</span>)</span>
-<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a><span class="do">####---- add Other annotation information----####</span></span>
-<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a>annotation_df <span class="sc">%&gt;%</span></span>
-<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">GC_content =</span> <span class="fu">cut</span>(GC_content, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">30</span>,<span class="dv">40</span>,<span class="dv">50</span>,<span class="dv">60</span>,<span class="dv">70</span>,<span class="dv">80</span>), <span class="at">right =</span> F)) <span class="sc">%&gt;%</span></span>
-<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">Completeness =</span> <span class="fu">cut</span>(Completeness, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">40</span>,<span class="dv">50</span>,<span class="dv">60</span>,<span class="dv">70</span>,<span class="dv">80</span>,<span class="dv">90</span>), <span class="at">right =</span> F)) <span class="sc">%&gt;%</span></span>
-<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">Contamination =</span> <span class="fu">cut</span>(Contamination, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">50</span>,<span class="dv">60</span>,<span class="dv">70</span>,<span class="dv">80</span>,<span class="dv">90</span>,<span class="dv">100</span>), <span class="at">right =</span> F)) <span class="sc">%&gt;%</span></span>
-<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>ID, <span class="at">names_to =</span> <span class="st">"Type"</span>, <span class="at">values_to =</span> <span class="st">"Value"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">Type =</span> <span class="fu">factor</span>(Type, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"GC_content"</span>, <span class="st">"Completeness"</span>, <span class="st">"Contamination"</span>,</span>
-<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a>                                               <span class="st">"Source"</span>, <span class="st">"Habitate_Type"</span>, <span class="st">"RNA"</span>),</span>
-<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a>                              <span class="at">ordered =</span> T)) <span class="sc">%&gt;%</span></span>
-<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">ID =</span> <span class="fu">factor</span>(ID, <span class="at">levels =</span> <span class="fu">rev</span>(tree.sort.id), <span class="at">ordered =</span> T)) <span class="sc">%&gt;%</span></span>
-<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Type, <span class="at">y =</span> ID)) <span class="sc">+</span> </span>
-<span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="at">fill =</span> <span class="st">"#ffffff"</span>, <span class="at">width =</span> <span class="fl">0.8</span>) <span class="sc">+</span> </span>
-<span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="at">data =</span> . <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(Type <span class="sc">==</span> <span class="st">"GC_content"</span>),<span class="fu">aes</span>(<span class="at">fill =</span> Value), <span class="at">width =</span> <span class="fl">0.5</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span> </span>
-<span id="cb7-82"><a href="#cb7-82" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'#f0f9e8'</span>,<span class="st">'#bae4bc'</span>,<span class="st">'#7bccc4'</span>,<span class="st">'#43a2ca'</span>,<span class="st">'#0868ac'</span>), </span>
-<span id="cb7-83"><a href="#cb7-83" aria-hidden="true" tabindex="-1"></a>                    <span class="at">name =</span> <span class="st">"GC_content"</span>,</span>
-<span id="cb7-84"><a href="#cb7-84" aria-hidden="true" tabindex="-1"></a>                    <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">order =</span> <span class="dv">1</span>)) <span class="sc">+</span> </span>
-<span id="cb7-85"><a href="#cb7-85" aria-hidden="true" tabindex="-1"></a>  <span class="fu">new_scale_fill</span>() <span class="sc">+</span> </span>
-<span id="cb7-86"><a href="#cb7-86" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="at">data =</span> . <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(Type <span class="sc">==</span> <span class="st">"Completeness"</span>),<span class="fu">aes</span>(<span class="at">fill =</span> Value), <span class="at">width =</span> <span class="fl">0.5</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
-<span id="cb7-87"><a href="#cb7-87" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'#f1eef6'</span>,<span class="st">'#d7b5d8'</span>,<span class="st">'#df65b0'</span>,<span class="st">'#dd1c77'</span>,<span class="st">'#980043'</span>), </span>
-<span id="cb7-88"><a href="#cb7-88" aria-hidden="true" tabindex="-1"></a>                    <span class="at">name =</span> <span class="st">"Completeness"</span>,</span>
-<span id="cb7-89"><a href="#cb7-89" aria-hidden="true" tabindex="-1"></a>                    <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">order =</span> <span class="dv">2</span>)) <span class="sc">+</span> </span>
-<span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a>  <span class="fu">new_scale_fill</span>() <span class="sc">+</span> </span>
-<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="at">data =</span> . <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(Type <span class="sc">==</span> <span class="st">"Contamination"</span>),<span class="fu">aes</span>(<span class="at">fill =</span> Value), <span class="at">width =</span> <span class="fl">0.5</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span> </span>
-<span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'#f2f0f7'</span>,<span class="st">'#cbc9e2'</span>,<span class="st">'#9e9ac8'</span>,<span class="st">'#756bb1'</span>,<span class="st">'#54278f'</span>), </span>
-<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a>                    <span class="at">name =</span> <span class="st">"Contamination"</span>,</span>
-<span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a>                    <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">order =</span> <span class="dv">3</span>)) <span class="sc">+</span> </span>
-<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a>  <span class="fu">new_scale_fill</span>() <span class="sc">+</span> </span>
-<span id="cb7-96"><a href="#cb7-96" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> . <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(Type <span class="sc">==</span> <span class="st">"Source"</span>), <span class="fu">aes</span>(<span class="at">fill =</span> Value), <span class="at">size =</span> <span class="dv">7</span>, <span class="at">alpha =</span> <span class="fl">0.75</span>, <span class="at">shape =</span> <span class="dv">21</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span> </span>
-<span id="cb7-97"><a href="#cb7-97" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'#8dd3c7'</span>,<span class="st">'#ffffb3'</span>,<span class="st">'#bebada'</span>,<span class="st">'#fb8072'</span>,<span class="st">'#80b1d3'</span>,</span>
-<span id="cb7-98"><a href="#cb7-98" aria-hidden="true" tabindex="-1"></a>                               <span class="st">'#fdb462'</span>,<span class="st">'#b3de69'</span>,<span class="st">'#fccde5'</span>,<span class="st">'#d9d9d9'</span>,<span class="st">'#bc80bd'</span>), </span>
-<span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a>                    <span class="at">name =</span> <span class="st">"Source"</span>,</span>
-<span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a>                    <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">order =</span> <span class="dv">4</span>)) <span class="sc">+</span> </span>
-<span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a>  <span class="fu">new_scale_fill</span>() <span class="sc">+</span> </span>
-<span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> . <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(Type <span class="sc">==</span> <span class="st">"Habitate_Type"</span>), <span class="fu">aes</span>(<span class="at">fill =</span> Value), <span class="at">size =</span> <span class="dv">7</span>, <span class="at">alpha =</span> <span class="fl">0.75</span>, <span class="at">shape =</span> <span class="dv">21</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span> </span>
-<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'#a6cee3'</span>,<span class="st">'#1f78b4'</span>,<span class="st">'#b2df8a'</span>), </span>
-<span id="cb7-104"><a href="#cb7-104" aria-hidden="true" tabindex="-1"></a>                    <span class="at">name =</span> <span class="st">"Habitate_Type"</span>,</span>
-<span id="cb7-105"><a href="#cb7-105" aria-hidden="true" tabindex="-1"></a>                    <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">order =</span> <span class="dv">5</span>)) <span class="sc">+</span> </span>
-<span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a>  <span class="fu">new_scale_fill</span>() <span class="sc">+</span> </span>
-<span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> . <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(Type <span class="sc">==</span> <span class="st">"RNA"</span>), <span class="fu">aes</span>(<span class="at">fill =</span> Value), <span class="at">size =</span> <span class="dv">7</span>, <span class="at">alpha =</span> <span class="fl">0.75</span>, <span class="at">shape =</span> <span class="dv">21</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span> </span>
-<span id="cb7-108"><a href="#cb7-108" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'#66c2a5'</span>,<span class="st">'#fc8d62'</span>), </span>
-<span id="cb7-109"><a href="#cb7-109" aria-hidden="true" tabindex="-1"></a>                    <span class="at">name =</span> <span class="st">"RNA"</span>,</span>
-<span id="cb7-110"><a href="#cb7-110" aria-hidden="true" tabindex="-1"></a>                    <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">order =</span> <span class="dv">6</span>)) <span class="sc">+</span> </span>
-<span id="cb7-111"><a href="#cb7-111" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> <span class="st">""</span>) <span class="sc">+</span> </span>
-<span id="cb7-112"><a href="#cb7-112" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">position =</span> <span class="st">"top"</span>) <span class="sc">+</span> </span>
-<span id="cb7-113"><a href="#cb7-113" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span> </span>
-<span id="cb7-114"><a href="#cb7-114" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb7-115"><a href="#cb7-115" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-116"><a href="#cb7-116" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.border =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-117"><a href="#cb7-117" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-118"><a href="#cb7-118" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-119"><a href="#cb7-119" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks.y =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-120"><a href="#cb7-120" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x.top =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>, <span class="at">color =</span> <span class="st">"#000000"</span>, <span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">face=</span><span class="st">"bold"</span>),</span>
-<span id="cb7-121"><a href="#cb7-121" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks.x.top =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-122"><a href="#cb7-122" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.background =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-123"><a href="#cb7-123" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.background =</span> <span class="fu">element_roundrect</span>(<span class="at">color =</span> <span class="st">"#969696"</span>)</span>
-<span id="cb7-124"><a href="#cb7-124" aria-hidden="true" tabindex="-1"></a>  ) <span class="ot">-&gt;</span> p.annotation</span>
-<span id="cb7-125"><a href="#cb7-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-126"><a href="#cb7-126" aria-hidden="true" tabindex="-1"></a>p.annotation <span class="sc">%&gt;%</span> <span class="fu">insert_left</span>(p_class) <span class="sc">%&gt;%</span> <span class="fu">insert_left</span>(p2, <span class="at">width =</span> <span class="fl">1.2</span>)</span>
-<span id="cb7-127"><a href="#cb7-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-128"><a href="#cb7-128" aria-hidden="true" tabindex="-1"></a><span class="do">####---- add bar plot----####</span></span>
-<span id="cb7-129"><a href="#cb7-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-130"><a href="#cb7-130" aria-hidden="true" tabindex="-1"></a>p_bar <span class="ot">&lt;-</span> bar_df <span class="sc">%&gt;%</span></span>
-<span id="cb7-131"><a href="#cb7-131" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">ID =</span> <span class="fu">factor</span>(ID, <span class="at">levels =</span> <span class="fu">rev</span>(tree.sort.id), <span class="at">ordered =</span> T)) <span class="sc">%&gt;%</span></span>
-<span id="cb7-132"><a href="#cb7-132" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb7-133"><a href="#cb7-133" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> Count, <span class="at">y =</span> ID), <span class="at">fill =</span> <span class="st">"#bdbdbd"</span>, <span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span> </span>
-<span id="cb7-134"><a href="#cb7-134" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">position =</span> <span class="st">"top"</span>) <span class="sc">+</span> </span>
-<span id="cb7-135"><a href="#cb7-135" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">4</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
-<span id="cb7-136"><a href="#cb7-136" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> <span class="st">""</span>) <span class="sc">+</span> </span>
-<span id="cb7-137"><a href="#cb7-137" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb7-138"><a href="#cb7-138" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb7-139"><a href="#cb7-139" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-140"><a href="#cb7-140" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">linewidth =</span> <span class="fl">1.5</span>),</span>
-<span id="cb7-141"><a href="#cb7-141" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-142"><a href="#cb7-142" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-143"><a href="#cb7-143" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks.y =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-144"><a href="#cb7-144" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>, <span class="at">color =</span> <span class="st">"#000000"</span>, <span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">0</span>),</span>
-<span id="cb7-145"><a href="#cb7-145" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.background =</span> <span class="fu">element_roundrect</span>(<span class="at">color =</span> <span class="st">"#969696"</span>)</span>
-<span id="cb7-146"><a href="#cb7-146" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb7-147"><a href="#cb7-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-148"><a href="#cb7-148" aria-hidden="true" tabindex="-1"></a>p_bar</span>
-<span id="cb7-149"><a href="#cb7-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-150"><a href="#cb7-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-151"><a href="#cb7-151" aria-hidden="true" tabindex="-1"></a><span class="do">####----combine----####</span></span>
-<span id="cb7-152"><a href="#cb7-152" aria-hidden="true" tabindex="-1"></a>p_combine <span class="ot">&lt;-</span> p_bar <span class="sc">%&gt;%</span> </span>
-<span id="cb7-153"><a href="#cb7-153" aria-hidden="true" tabindex="-1"></a>  <span class="fu">insert_left</span>(p.annotation, <span class="at">width =</span> <span class="dv">3</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-154"><a href="#cb7-154" aria-hidden="true" tabindex="-1"></a>  <span class="fu">insert_left</span>(p_class, <span class="at">width =</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-155"><a href="#cb7-155" aria-hidden="true" tabindex="-1"></a>  <span class="fu">insert_left</span>(p2, <span class="at">width =</span> <span class="fl">3.5</span>)</span>
-<span id="cb7-156"><a href="#cb7-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-157"><a href="#cb7-157" aria-hidden="true" tabindex="-1"></a><span class="co"># p_combine</span></span>
-<span id="cb7-158"><a href="#cb7-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-159"><a href="#cb7-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-160"><a href="#cb7-160" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename =</span> <span class="st">"p_combine1.pdf"</span>,</span>
-<span id="cb7-161"><a href="#cb7-161" aria-hidden="true" tabindex="-1"></a>       <span class="at">plot =</span> p_combine,</span>
-<span id="cb7-162"><a href="#cb7-162" aria-hidden="true" tabindex="-1"></a>       <span class="at">height =</span> <span class="dv">20</span>,</span>
-<span id="cb7-163"><a href="#cb7-163" aria-hidden="true" tabindex="-1"></a>       <span class="at">width =</span> <span class="dv">18</span>)</span>
-<span id="cb7-164"><a href="#cb7-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-165"><a href="#cb7-165" aria-hidden="true" tabindex="-1"></a><span class="do">####----sessionInfo----####</span></span>
-<span id="cb7-166"><a href="#cb7-166" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>group_info <span class="sc">%&gt;%</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(SupGroup) <span class="sc">%&gt;%</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(<span class="fu">desc</span>(SupGroup)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">cumsum =</span> <span class="fu">cumsum</span>(count)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">position =</span> cumsum <span class="sc">-</span> <span class="fl">0.5</span> <span class="sc">*</span> count) <span class="sc">%&gt;%</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">Type =</span> <span class="st">"SupGroup"</span>)<span class="ot">-&gt;</span> position2</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>group_info <span class="sc">%&gt;%</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">ID =</span> <span class="fu">factor</span>(ID, <span class="at">levels =</span> <span class="fu">rev</span>(tree.sort.id), <span class="at">ordered =</span> T)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>ID, <span class="at">names_to =</span> <span class="st">"Type"</span>, <span class="at">values_to =</span> <span class="st">"Value"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Type, <span class="at">y =</span> ID)) <span class="sc">+</span> </span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="fu">aes</span>(<span class="at">fill =</span> Value), <span class="at">linewidth =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="cn">NA</span>) <span class="sc">+</span> </span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> position1, <span class="fu">aes</span>(<span class="at">x =</span> Type, <span class="at">y =</span> position, <span class="at">label =</span> Group),</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>            <span class="at">size =</span> <span class="dv">5</span>,</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>            <span class="at">color =</span> <span class="st">"#000000"</span>) <span class="sc">+</span> </span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> position2, <span class="fu">aes</span>(<span class="at">x =</span> Type, <span class="at">y =</span> position, <span class="at">label =</span> SupGroup),</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>            <span class="at">angle =</span> <span class="dv">90</span>,</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>            <span class="at">fontface =</span> <span class="dv">3</span>,</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>            <span class="at">size =</span> <span class="dv">6</span>,</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>            <span class="at">color =</span> <span class="st">"#ffffff"</span>) <span class="sc">+</span> </span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>      <span class="st">"group_1"</span> <span class="ot">=</span> <span class="st">"#addd8e"</span>,</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>      <span class="st">"group_2"</span> <span class="ot">=</span> <span class="st">"#41ab5d"</span>,</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>      <span class="st">"group_3"</span> <span class="ot">=</span> <span class="st">"#9ebcda"</span>,</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>      <span class="st">"group_4"</span> <span class="ot">=</span> <span class="st">"#8c6bb1"</span>,</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>      <span class="st">"SubGroup_1"</span> <span class="ot">=</span> <span class="st">"#238443"</span>,</span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>      <span class="st">"SubGroup_2"</span> <span class="ot">=</span> <span class="st">"#88419d"</span>),</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">"Group Info"</span>) <span class="sc">+</span> </span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">position =</span> <span class="st">"top"</span>) <span class="sc">+</span> </span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> <span class="st">""</span>) <span class="sc">+</span> </span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span> </span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.border =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x.top =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>, <span class="at">color =</span> <span class="st">"#000000"</span>, <span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">face=</span><span class="st">"bold"</span>),</span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks.x.top =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.background =</span> <span class="fu">element_roundrect</span>(<span class="at">color =</span> <span class="st">"#969696"</span>)</span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>  )<span class="ot">-&gt;</span> p_class</span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a>p_class <span class="sc">%&gt;%</span> <span class="fu">insert_left</span>(p2, <span class="at">width =</span> <span class="fl">1.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="使用R语言画ISME中的进化树_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="1152"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="添加其他注释信息" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="添加其他注释信息"><span class="header-section-number">1.5</span> 添加其他注释信息</h2>
+<div class="cell" data-lable="p_annotation">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">####---- add Other annotation information----####</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>annotation_df <span class="sc">%&gt;%</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">GC_content =</span> <span class="fu">cut</span>(GC_content, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">30</span>,<span class="dv">40</span>,<span class="dv">50</span>,<span class="dv">60</span>,<span class="dv">70</span>,<span class="dv">80</span>), <span class="at">right =</span> F)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">Completeness =</span> <span class="fu">cut</span>(Completeness, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">40</span>,<span class="dv">50</span>,<span class="dv">60</span>,<span class="dv">70</span>,<span class="dv">80</span>,<span class="dv">90</span>), <span class="at">right =</span> F)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">Contamination =</span> <span class="fu">cut</span>(Contamination, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">50</span>,<span class="dv">60</span>,<span class="dv">70</span>,<span class="dv">80</span>,<span class="dv">90</span>,<span class="dv">100</span>), <span class="at">right =</span> F)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>ID, <span class="at">names_to =</span> <span class="st">"Type"</span>, <span class="at">values_to =</span> <span class="st">"Value"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">Type =</span> <span class="fu">factor</span>(Type, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"GC_content"</span>, <span class="st">"Completeness"</span>, <span class="st">"Contamination"</span>,</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>                                               <span class="st">"Source"</span>, <span class="st">"Habitate_Type"</span>, <span class="st">"RNA"</span>),</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>                              <span class="at">ordered =</span> T)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">ID =</span> <span class="fu">factor</span>(ID, <span class="at">levels =</span> <span class="fu">rev</span>(tree.sort.id), <span class="at">ordered =</span> T)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Type, <span class="at">y =</span> ID)) <span class="sc">+</span> </span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="at">fill =</span> <span class="st">"#ffffff"</span>, <span class="at">width =</span> <span class="fl">0.8</span>) <span class="sc">+</span> </span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="at">data =</span> . <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(Type <span class="sc">==</span> <span class="st">"GC_content"</span>),<span class="fu">aes</span>(<span class="at">fill =</span> Value), <span class="at">width =</span> <span class="fl">0.5</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span> </span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'#f0f9e8'</span>,<span class="st">'#bae4bc'</span>,<span class="st">'#7bccc4'</span>,<span class="st">'#43a2ca'</span>,<span class="st">'#0868ac'</span>), </span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>                    <span class="at">name =</span> <span class="st">"GC_content"</span>,</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>                    <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">order =</span> <span class="dv">1</span>)) <span class="sc">+</span> </span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">new_scale_fill</span>() <span class="sc">+</span> </span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="at">data =</span> . <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(Type <span class="sc">==</span> <span class="st">"Completeness"</span>),<span class="fu">aes</span>(<span class="at">fill =</span> Value), <span class="at">width =</span> <span class="fl">0.5</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'#f1eef6'</span>,<span class="st">'#d7b5d8'</span>,<span class="st">'#df65b0'</span>,<span class="st">'#dd1c77'</span>,<span class="st">'#980043'</span>), </span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>                    <span class="at">name =</span> <span class="st">"Completeness"</span>,</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>                    <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">order =</span> <span class="dv">2</span>)) <span class="sc">+</span> </span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">new_scale_fill</span>() <span class="sc">+</span> </span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="at">data =</span> . <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(Type <span class="sc">==</span> <span class="st">"Contamination"</span>),<span class="fu">aes</span>(<span class="at">fill =</span> Value), <span class="at">width =</span> <span class="fl">0.5</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span> </span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'#f2f0f7'</span>,<span class="st">'#cbc9e2'</span>,<span class="st">'#9e9ac8'</span>,<span class="st">'#756bb1'</span>,<span class="st">'#54278f'</span>), </span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>                    <span class="at">name =</span> <span class="st">"Contamination"</span>,</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>                    <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">order =</span> <span class="dv">3</span>)) <span class="sc">+</span> </span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">new_scale_fill</span>() <span class="sc">+</span> </span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> . <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(Type <span class="sc">==</span> <span class="st">"Source"</span>), <span class="fu">aes</span>(<span class="at">fill =</span> Value), <span class="at">size =</span> <span class="dv">7</span>, <span class="at">alpha =</span> <span class="fl">0.75</span>, <span class="at">shape =</span> <span class="dv">21</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span> </span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'#8dd3c7'</span>,<span class="st">'#ffffb3'</span>,<span class="st">'#bebada'</span>,<span class="st">'#fb8072'</span>,<span class="st">'#80b1d3'</span>,</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>                               <span class="st">'#fdb462'</span>,<span class="st">'#b3de69'</span>,<span class="st">'#fccde5'</span>,<span class="st">'#d9d9d9'</span>,<span class="st">'#bc80bd'</span>), </span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>                    <span class="at">name =</span> <span class="st">"Source"</span>,</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>                    <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">order =</span> <span class="dv">4</span>)) <span class="sc">+</span> </span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">new_scale_fill</span>() <span class="sc">+</span> </span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> . <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(Type <span class="sc">==</span> <span class="st">"Habitate_Type"</span>), <span class="fu">aes</span>(<span class="at">fill =</span> Value), <span class="at">size =</span> <span class="dv">7</span>, <span class="at">alpha =</span> <span class="fl">0.75</span>, <span class="at">shape =</span> <span class="dv">21</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span> </span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'#a6cee3'</span>,<span class="st">'#1f78b4'</span>,<span class="st">'#b2df8a'</span>), </span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>                    <span class="at">name =</span> <span class="st">"Habitate_Type"</span>,</span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>                    <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">order =</span> <span class="dv">5</span>)) <span class="sc">+</span> </span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">new_scale_fill</span>() <span class="sc">+</span> </span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> . <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(Type <span class="sc">==</span> <span class="st">"RNA"</span>), <span class="fu">aes</span>(<span class="at">fill =</span> Value), <span class="at">size =</span> <span class="dv">7</span>, <span class="at">alpha =</span> <span class="fl">0.75</span>, <span class="at">shape =</span> <span class="dv">21</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span> </span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'#66c2a5'</span>,<span class="st">'#fc8d62'</span>), </span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>                    <span class="at">name =</span> <span class="st">"RNA"</span>,</span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>                    <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">order =</span> <span class="dv">6</span>)) <span class="sc">+</span> </span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> <span class="st">""</span>) <span class="sc">+</span> </span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">position =</span> <span class="st">"top"</span>) <span class="sc">+</span> </span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span> </span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.border =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x.top =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>, <span class="at">color =</span> <span class="st">"#000000"</span>, <span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">face=</span><span class="st">"bold"</span>),</span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks.x.top =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.background =</span> <span class="fu">element_roundrect</span>(<span class="at">color =</span> <span class="st">"#969696"</span>)</span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>  ) <span class="ot">-&gt;</span> p.annotation</span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>p.annotation <span class="sc">%&gt;%</span> <span class="fu">insert_left</span>(p_class) <span class="sc">%&gt;%</span> <span class="fu">insert_left</span>(p2, <span class="at">width =</span> <span class="fl">1.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="使用R语言画ISME中的进化树_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="1536"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="添加右边的条形图" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="添加右边的条形图"><span class="header-section-number">1.6</span> 添加右边的条形图</h2>
+<div class="cell" data-lable="p_bar">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">####---- add bar plot----####</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>p_bar <span class="ot">&lt;-</span> bar_df <span class="sc">%&gt;%</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">ID =</span> <span class="fu">factor</span>(ID, <span class="at">levels =</span> <span class="fu">rev</span>(tree.sort.id), <span class="at">ordered =</span> T)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> Count, <span class="at">y =</span> ID), <span class="at">fill =</span> <span class="st">"#bdbdbd"</span>, <span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span> </span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">position =</span> <span class="st">"top"</span>) <span class="sc">+</span> </span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">4</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> <span class="st">""</span>) <span class="sc">+</span> </span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">linewidth =</span> <span class="fl">1.5</span>),</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>, <span class="at">color =</span> <span class="st">"#000000"</span>, <span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">0</span>),</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.background =</span> <span class="fu">element_roundrect</span>(<span class="at">color =</span> <span class="st">"#969696"</span>)</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>p_bar</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="使用R语言画ISME中的进化树_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="将所有组件结合在一起" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="将所有组件结合在一起"><span class="header-section-number">1.7</span> 将所有组件结合在一起</h2>
+<div class="cell" data-lable="p_combine">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">####----combine----####</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>p_combine <span class="ot">&lt;-</span> p_bar <span class="sc">%&gt;%</span> </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">insert_left</span>(p.annotation, <span class="at">width =</span> <span class="dv">3</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">insert_left</span>(p_class, <span class="at">width =</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">insert_left</span>(p2, <span class="at">width =</span> <span class="fl">3.5</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># ggsave(filename = "p_combine1.pdf",</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co">#        plot = p_combine,</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co">#        height = 20,</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co">#        width = 18)</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>p_combine</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="使用R语言画ISME中的进化树_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="1920"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="系统信息" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="系统信息"><span class="header-section-number">1.8</span> 系统信息</h2>
+<div class="cell" data-lable="sessionInfo">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">####----sessionInfo----####</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>R version 4.4.1 (2024-06-14 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 22631)
+
+Matrix products: default
+
+
+locale:
+[1] LC_COLLATE=Chinese (Simplified)_China.utf8 
+[2] LC_CTYPE=Chinese (Simplified)_China.utf8   
+[3] LC_MONETARY=Chinese (Simplified)_China.utf8
+[4] LC_NUMERIC=C                               
+[5] LC_TIME=Chinese (Simplified)_China.utf8    
+
+time zone: Asia/Shanghai
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] ggstar_1.0.4     patchwork_1.2.0  ggnewscale_0.5.0 aplot_0.2.3     
+ [5] ggfun_0.1.5      tidytree_0.4.6   treeio_1.28.0    ggtree_3.12.0   
+ [9] lubridate_1.9.3  forcats_1.0.0    stringr_1.5.1    dplyr_1.1.4     
+[13] purrr_1.0.2      readr_2.1.5      tidyr_1.3.1      tibble_3.2.1    
+[17] ggplot2_3.5.1    tidyverse_2.0.0 
+
+loaded via a namespace (and not attached):
+ [1] gtable_0.3.5       xfun_0.46          htmlwidgets_1.6.4  lattice_0.22-6    
+ [5] tzdb_0.4.0         vctrs_0.6.5        tools_4.4.1        generics_0.1.3    
+ [9] yulab.utils_0.1.5  parallel_4.4.1     fansi_1.0.6        pkgconfig_2.0.3   
+[13] ggplotify_0.1.2    lifecycle_1.0.4    farver_2.1.2       compiler_4.4.1    
+[17] munsell_0.5.1      htmltools_0.5.8.1  yaml_2.3.10        lazyeval_0.2.2    
+[21] pillar_1.9.0       crayon_1.5.3       cachem_1.1.0       nlme_3.1-164      
+[25] tidyselect_1.2.1   digest_0.6.36      stringi_1.8.4      labeling_0.4.3    
+[29] fastmap_1.2.0      grid_4.4.1         colorspace_2.1-1   cli_3.6.3         
+[33] magrittr_2.0.3     utf8_1.2.4         ape_5.8            withr_3.0.1       
+[37] scales_1.3.0       bit64_4.0.5        timechange_0.3.0   rmarkdown_2.27    
+[41] bit_4.0.5          gridExtra_2.3      hms_1.1.3          memoise_2.0.1     
+[45] evaluate_0.24.0    knitr_1.48         gridGraphics_0.5-1 rlang_1.1.4       
+[49] Rcpp_1.0.13        glue_1.7.0         rstudioapi_0.16.0  vroom_1.6.5       
+[53] jsonlite_1.8.8     R6_2.5.1           fs_1.6.4          </code></pre>
+</div>
 </div>
 
 

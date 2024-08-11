@@ -1,6 +1,6 @@
-# 使用R语言画*ISME*中的进化树
+# 使用R语言画***ISME***中的进化树
 
-使用R画**ISME** [论文](https://doi.org/10.1093/ismejo/wrad031){target="_blank"}
+使用R画***ISME*** [论文](https://doi.org/10.1093/ismejo/wrad031){target="_blank"}
 中Figure 1. 中的进化树图。
 
 论文PDF[文件](ISME1.pdf){target="_blank"}
@@ -29,6 +29,7 @@ library(ggstar)
 ## 加载数据
 
 ```{r}
+#| lable: loadData
 #| message: false
 #| warning: false
 ####----load Data----####
@@ -57,8 +58,11 @@ bar_df <- read_delim(file = "./data/bar_df_1.csv", delim = ",", col_names = T)
 ## 画进化树
 
 ```{r}
+#| lable: p1
 #| message: false
 #| warning: false
+#| fig-width: 10
+#| fig-height: 12
 ####----Tree Plot----####
 
 tree_df <- as_tibble(tree) %>%
@@ -78,9 +82,15 @@ p1 <- ggtree(tree2) %<+% tree_df  +
   xlim(NA, 10)
 
 p1
+```
 
-# p2 <- scaleClade(p1, 78, 1) %>%
-#   collapse(78, 'max', fill="darkgreen") +
+
+```{r}
+#| lable: p2
+#| message: false
+#| warning: false
+#| fig-width: 10
+#| fig-height: 12
 p2 <- p1+
   # annotate(geom = "text", x = 6, y= 4.5, label = "OutGroup") + 
   geom_hilight(node = 80,
@@ -126,19 +136,19 @@ p2 <- p1+
   theme(legend.background = element_roundrect(color = "#969696"))
 
 p2
-
 ```
 
+## 给进化树加上条形图和分组信息
 
 ```{r}
-#| eval: false
-
-
-
+#| lable: p_class
+#| message: false
+#| warning: false
+#| fig-width: 12
+#| fig-height: 12
 
 ####----add bar plot for Group information----####
 id <- tree.sort.id
-
 
 group_info %>%
   dplyr::group_by(Group) %>%
@@ -156,9 +166,6 @@ group_info %>%
   dplyr::mutate(cumsum = cumsum(count)) %>%
   dplyr::mutate(position = cumsum - 0.5 * count) %>%
   dplyr::mutate(Type = "SupGroup")-> position2
-
-
-
 
 group_info %>%
   dplyr::mutate(ID = factor(ID, levels = rev(tree.sort.id), ordered = T)) %>%
@@ -197,13 +204,21 @@ group_info %>%
     legend.background = element_roundrect(color = "#969696")
   )-> p_class
 
-p_class
 
 p_class %>% insert_left(p2, width = 1.2)
+```
 
 
+
+## 添加其他注释信息
+
+```{r}
+#| lable: p_annotation
+#| message: false
+#| warning: false
+#| fig-width: 16
+#| fig-height: 16
 ####---- add Other annotation information----####
-
 
 annotation_df %>%
   dplyr::mutate(GC_content = cut(GC_content, breaks = c(30,40,50,60,70,80), right = F)) %>%
@@ -262,6 +277,18 @@ annotation_df %>%
   ) -> p.annotation
 
 p.annotation %>% insert_left(p_class) %>% insert_left(p2, width = 1.2)
+```
+
+
+## 添加右边的条形图
+
+
+```{r}
+#| lable: p_bar
+#| message: false
+#| warning: false
+#| fig-width: 4
+#| fig-height: 16
 
 ####---- add bar plot----####
 
@@ -285,24 +312,38 @@ p_bar <- bar_df %>%
 
 p_bar
 
+```
 
+## 将所有组件结合在一起
+
+
+```{r}
+#| lable: p_combine
+#| message: false
+#| warning: false
+#| fig-width: 20
+#| fig-height: 18
 ####----combine----####
 p_combine <- p_bar %>% 
   insert_left(p.annotation, width = 3) %>% 
   insert_left(p_class, width = 1) %>% 
   insert_left(p2, width = 3.5)
 
-# p_combine
+# ggsave(filename = "p_combine1.pdf",
+#        plot = p_combine,
+#        height = 20,
+#        width = 18)
+p_combine
+
+```
 
 
-ggsave(filename = "p_combine1.pdf",
-       plot = p_combine,
-       height = 20,
-       width = 18)
+## 系统信息
+
+```{r}
+#| lable: sessionInfo
 
 ####----sessionInfo----####
 sessionInfo()
-
-
 ```
 
