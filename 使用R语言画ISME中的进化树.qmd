@@ -8,7 +8,7 @@
 ## 加载R包
 
 ```{r}
-#| lable: loadRPackage
+#| label: loadRPackage
 #| warning: false
 #| message: false
 
@@ -29,7 +29,7 @@ library(ggstar)
 ## 加载数据
 
 ```{r}
-#| lable: loadData
+#| label: loadData
 #| message: false
 #| warning: false
 ####----load Data----####
@@ -58,7 +58,7 @@ bar_df <- read_delim(file = "./data/bar_df_1.csv", delim = ",", col_names = T)
 ## 画进化树
 
 ```{r}
-#| lable: p1
+#| label: fig-p1
 #| message: false
 #| warning: false
 #| fig-width: 10
@@ -86,7 +86,7 @@ p1
 
 
 ```{r}
-#| lable: p2
+#| label: fig-p2
 #| message: false
 #| warning: false
 #| fig-width: 10
@@ -141,7 +141,7 @@ p2
 ## 给进化树加上条形图和分组信息
 
 ```{r}
-#| lable: p_class
+#| label: fig-p_class
 #| message: false
 #| warning: false
 #| fig-width: 12
@@ -213,7 +213,7 @@ p_class %>% insert_left(p2, width = 1.2)
 ## 添加其他注释信息
 
 ```{r}
-#| lable: p_annotation
+#| label: fig-p_annotation
 #| message: false
 #| warning: false
 #| fig-width: 16
@@ -284,7 +284,7 @@ p.annotation %>% insert_left(p_class) %>% insert_left(p2, width = 1.2)
 
 
 ```{r}
-#| lable: p_bar
+#| label: fig-p_bar
 #| message: false
 #| warning: false
 #| fig-width: 4
@@ -318,7 +318,7 @@ p_bar
 
 
 ```{r}
-#| lable: p_combine
+#| label: fig-p_combine
 #| message: false
 #| warning: false
 #| fig-width: 20
@@ -341,7 +341,7 @@ p_combine
 ## 系统信息
 
 ```{r}
-#| lable: sessionInfo
+#| label: sessionInfo
 
 ####----sessionInfo----####
 sessionInfo()

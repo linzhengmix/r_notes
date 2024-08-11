@@ -212,7 +212,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>论文PDF<a href="ISME1.pdf" target="_blank">文件</a></p>
 <section id="加载r包" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="加载r包"><span class="header-section-number">1.1</span> 加载R包</h2>
-<div class="cell" data-lable="loadRPackage">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -228,7 +228,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="加载数据" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="加载数据"><span class="header-section-number">1.2</span> 加载数据</h2>
-<div class="cell" data-lable="loadData">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">####----load Data----####</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tree <span class="ot">&lt;-</span> treeio<span class="sc">::</span><span class="fu">read.newick</span>(<span class="at">file =</span> <span class="st">"./data/WRKY_TAIR.pep.muscle_1.treefile"</span>,</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                            <span class="at">node.label =</span> <span class="st">"support"</span>)</span>
@@ -253,7 +253,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="画进化树" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="画进化树"><span class="header-section-number">1.3</span> 画进化树</h2>
-<div class="cell" data-lable="p1">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">####----Tree Plot----####</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>tree_df <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(tree) <span class="sc">%&gt;%</span></span>
@@ -291,14 +291,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>p1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="使用R语言画ISME中的进化树_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="960"></p>
+<div id="fig-p1" class="quarto-float quarto-figure quarto-figure-center anchored" width="960">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-p1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="使用R语言画ISME中的进化树_files/figure-html/fig-p1-1.png" id="fig-p1" class="img-fluid figure-img" width="960">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-p1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.1
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<div class="cell" data-lable="p2">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> p1<span class="sc">+</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># annotate(geom = "text", x = 6, y= 4.5, label = "OutGroup") + </span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hilight</span>(<span class="at">node =</span> <span class="dv">80</span>,</span>
@@ -345,9 +350,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="使用R语言画ISME中的进化树_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="960"></p>
+<div id="fig-p2" class="quarto-float quarto-figure quarto-figure-center anchored" width="960">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-p2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="使用R语言画ISME中的进化树_files/figure-html/fig-p2-1.png" id="fig-p2" class="img-fluid figure-img" width="960">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-p2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.2
+</figcaption>
 </figure>
 </div>
 </div>
@@ -355,7 +365,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="给进化树加上条形图和分组信息" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="给进化树加上条形图和分组信息"><span class="header-section-number">1.4</span> 给进化树加上条形图和分组信息</h2>
-<div class="cell" data-lable="p_class">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">####----add bar plot for Group information----####</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>id <span class="ot">&lt;-</span> tree.sort.id</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -416,9 +426,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a>p_class <span class="sc">%&gt;%</span> <span class="fu">insert_left</span>(p2, <span class="at">width =</span> <span class="fl">1.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="使用R语言画ISME中的进化树_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="1152"></p>
+<div id="fig-p_class" class="quarto-float quarto-figure quarto-figure-center anchored" width="1152">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-p_class-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="使用R语言画ISME中的进化树_files/figure-html/fig-p_class-1.png" id="fig-p_class" class="img-fluid figure-img" width="1152">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-p_class-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.3
+</figcaption>
 </figure>
 </div>
 </div>
@@ -426,7 +441,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="添加其他注释信息" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="添加其他注释信息"><span class="header-section-number">1.5</span> 添加其他注释信息</h2>
-<div class="cell" data-lable="p_annotation">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">####---- add Other annotation information----####</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>annotation_df <span class="sc">%&gt;%</span></span>
@@ -487,9 +502,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>p.annotation <span class="sc">%&gt;%</span> <span class="fu">insert_left</span>(p_class) <span class="sc">%&gt;%</span> <span class="fu">insert_left</span>(p2, <span class="at">width =</span> <span class="fl">1.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="使用R语言画ISME中的进化树_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="1536"></p>
+<div id="fig-p_annotation" class="quarto-float quarto-figure quarto-figure-center anchored" width="1536">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-p_annotation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="使用R语言画ISME中的进化树_files/figure-html/fig-p_annotation-1.png" id="fig-p_annotation" class="img-fluid figure-img" width="1536">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-p_annotation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.4
+</figcaption>
 </figure>
 </div>
 </div>
@@ -497,7 +517,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="添加右边的条形图" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="添加右边的条形图"><span class="header-section-number">1.6</span> 添加右边的条形图</h2>
-<div class="cell" data-lable="p_bar">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">####---- add bar plot----####</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>p_bar <span class="ot">&lt;-</span> bar_df <span class="sc">%&gt;%</span></span>
@@ -520,9 +540,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>p_bar</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="使用R语言画ISME中的进化树_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="384"></p>
+<div id="fig-p_bar" class="quarto-float quarto-figure quarto-figure-center anchored" width="384">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-p_bar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="使用R语言画ISME中的进化树_files/figure-html/fig-p_bar-1.png" id="fig-p_bar" class="img-fluid figure-img" width="384">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-p_bar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.5
+</figcaption>
 </figure>
 </div>
 </div>
@@ -530,7 +555,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="将所有组件结合在一起" class="level2" data-number="1.7">
 <h2 data-number="1.7" class="anchored" data-anchor-id="将所有组件结合在一起"><span class="header-section-number">1.7</span> 将所有组件结合在一起</h2>
-<div class="cell" data-lable="p_combine">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">####----combine----####</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>p_combine <span class="ot">&lt;-</span> p_bar <span class="sc">%&gt;%</span> </span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">insert_left</span>(p.annotation, <span class="at">width =</span> <span class="dv">3</span>) <span class="sc">%&gt;%</span> </span>
@@ -543,9 +568,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co">#        width = 18)</span></span>
 <span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>p_combine</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="使用R语言画ISME中的进化树_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="1920"></p>
+<div id="fig-p_combine" class="quarto-float quarto-figure quarto-figure-center anchored" width="1920">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-p_combine-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="使用R语言画ISME中的进化树_files/figure-html/fig-p_combine-1.png" id="fig-p_combine" class="img-fluid figure-img" width="1920">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-p_combine-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.6
+</figcaption>
 </figure>
 </div>
 </div>
@@ -553,7 +583,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="系统信息" class="level2" data-number="1.8">
 <h2 data-number="1.8" class="anchored" data-anchor-id="系统信息"><span class="header-section-number">1.8</span> 系统信息</h2>
-<div class="cell" data-lable="sessionInfo">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">####----sessionInfo----####</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
