@@ -1,7 +1,6 @@
 # 使用R语言画***ISME***中的进化树
 
-使用R画***ISME*** [论文](https://doi.org/10.1093/ismejo/wrad031){target="_blank"}
-中Figure 1. 中的进化树图。
+使用R画***ISME*** [论文](https://doi.org/10.1093/ismejo/wrad031){target="_blank"} 中Figure 1. 中的进化树图。
 
 论文PDF[文件](ISME1.pdf){target="_blank"}
 
@@ -24,7 +23,6 @@ library(ggnewscale)
 library(patchwork)
 library(ggstar)
 ```
-
 
 ## 加载数据
 
@@ -54,7 +52,6 @@ annotation_df <- read_delim(file = "./data/annotation_df_1.csv",
 bar_df <- read_delim(file = "./data/bar_df_1.csv", delim = ",", col_names = T)
 ```
 
-
 ## 画进化树
 
 ```{r}
@@ -83,7 +80,6 @@ p1 <- ggtree(tree2) %<+% tree_df  +
 
 p1
 ```
-
 
 ```{r}
 #| label: fig-p2
@@ -208,8 +204,6 @@ group_info %>%
 p_class %>% insert_left(p2, width = 1.2)
 ```
 
-
-
 ## 添加其他注释信息
 
 ```{r}
@@ -279,9 +273,7 @@ annotation_df %>%
 p.annotation %>% insert_left(p_class) %>% insert_left(p2, width = 1.2)
 ```
 
-
 ## 添加右边的条形图
-
 
 ```{r}
 #| message: false
@@ -313,7 +305,6 @@ p_bar <- bar_df %>%
 
 ## 将所有组件结合在一起
 
-
 ```{r}
 #| label: fig-p_combine
 #| message: false
@@ -334,7 +325,6 @@ p_combine
 
 ```
 
-
 ## 系统信息
 
 ```{r}
@@ -343,4 +333,3 @@ p_combine
 ####----sessionInfo----####
 sessionInfo()
 ```
-
