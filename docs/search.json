@@ -74,7 +74,7 @@
     "href": "使用R语言画ISME中的进化树.html#添加右边的条形图",
     "title": "1  使用R语言画ISME中的进化树",
     "section": "1.6 添加右边的条形图",
-    "text": "1.6 添加右边的条形图\n\n####---- add bar plot----####\n\np_bar &lt;- bar_df %&gt;%\n  dplyr::mutate(ID = factor(ID, levels = rev(tree.sort.id), ordered = T)) %&gt;%\n  ggplot() + \n  geom_bar(aes(x = Count, y = ID), fill = \"#bdbdbd\", stat = \"identity\") + \n  scale_x_continuous(expand = c(0,0), position = \"top\") + \n  geom_vline(xintercept = 4, linetype = 2) + \n  labs(x = \"\", y = \"\") + \n  theme_bw() +\n  theme(\n    panel.background = element_blank(),\n    panel.border = element_rect(linewidth = 1.5),\n    panel.grid = element_blank(),\n    axis.text.y = element_blank(),\n    axis.ticks.y = element_blank(),\n    axis.text.x = element_text(size = 15, color = \"#000000\", angle = 45, hjust = 0),\n    legend.background = element_roundrect(color = \"#969696\")\n  )\n\np_bar\n\n\n\n\n\n\n\nFigure 1.5",
+    "text": "1.6 添加右边的条形图\n\n####---- add bar plot----####\n\np_bar &lt;- bar_df %&gt;%\n  dplyr::mutate(ID = factor(ID, levels = rev(tree.sort.id), ordered = T)) %&gt;%\n  ggplot() + \n  geom_bar(aes(x = Count, y = ID), fill = \"#bdbdbd\", stat = \"identity\") + \n  scale_x_continuous(expand = c(0,0), position = \"top\") + \n  geom_vline(xintercept = 4, linetype = 2) + \n  labs(x = \"\", y = \"\") + \n  theme_bw() +\n  theme(\n    panel.background = element_blank(),\n    panel.border = element_rect(linewidth = 1.5),\n    panel.grid = element_blank(),\n    axis.text.y = element_blank(),\n    axis.ticks.y = element_blank(),\n    axis.text.x = element_text(size = 15, color = \"#000000\", angle = 45, hjust = 0),\n    legend.background = element_roundrect(color = \"#969696\")\n  )",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>使用R语言画***ISME***中的进化树</span>"
     ]
@@ -84,7 +84,7 @@
     "href": "使用R语言画ISME中的进化树.html#将所有组件结合在一起",
     "title": "1  使用R语言画ISME中的进化树",
     "section": "1.7 将所有组件结合在一起",
-    "text": "1.7 将所有组件结合在一起\n\n####----combine----####\np_combine &lt;- p_bar %&gt;% \n  insert_left(p.annotation, width = 3) %&gt;% \n  insert_left(p_class, width = 1) %&gt;% \n  insert_left(p2, width = 3.5)\n\n# ggsave(filename = \"p_combine1.pdf\",\n#        plot = p_combine,\n#        height = 20,\n#        width = 18)\np_combine\n\n\n\n\n\n\n\nFigure 1.6",
+    "text": "1.7 将所有组件结合在一起\n\n####----combine----####\np_combine &lt;- p_bar %&gt;% \n  insert_left(p.annotation, width = 3) %&gt;% \n  insert_left(p_class, width = 1) %&gt;% \n  insert_left(p2, width = 3.5)\n\n# ggsave(filename = \"p_combine1.pdf\",\n#        plot = p_combine,\n#        height = 20,\n#        width = 18)\np_combine\n\n\n\n\n\n\n\nFigure 1.5",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>使用R语言画***ISME***中的进化树</span>"
     ]

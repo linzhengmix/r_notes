@@ -284,7 +284,6 @@ p.annotation %>% insert_left(p_class) %>% insert_left(p2, width = 1.2)
 
 
 ```{r}
-#| label: fig-p_bar
 #| message: false
 #| warning: false
 #| fig-width: 4
@@ -309,8 +308,6 @@ p_bar <- bar_df %>%
     axis.text.x = element_text(size = 15, color = "#000000", angle = 45, hjust = 0),
     legend.background = element_roundrect(color = "#969696")
   )
-
-p_bar
 
 ```
 
