@@ -1,3 +1,9 @@
+---
+format:
+  html: default
+  pdf: default
+---
+
 # 使用R语言画***ISME***中的进化树
 
 使用R画***ISME*** [论文](https://doi.org/10.1093/ismejo/wrad031){target="_blank"}
