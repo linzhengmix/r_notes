@@ -217,7 +217,7 @@ p_class %>% insert_left(p2, width = 1.2)
 #| message: false
 #| warning: false
 #| fig-width: 16
-#| fig-height: 16
+#| fig-height: 18
 ####---- add Other annotation information----####
 
 annotation_df %>%

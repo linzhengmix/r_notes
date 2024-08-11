@@ -7,7 +7,7 @@ book:
   author: "Lin Zheng"
   date: "2024/8/10"
   
-  # reader-mode: true
+  reader-mode: true
   cover-image: cover.jpg
   favicon: cover.jpg
   site-url: https://linzhengmix.github.io/r_notes/
